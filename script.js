@@ -34,6 +34,18 @@ startBtn.addEventListener("click", function() {
 
         }
     });
+    // i made the submit button unclickable so everytime you try to click on it it goes away 
+    // get submit button 
+    const submitbtn = document.getElementById("submitBtn");
+    // make button run away 
+    submitBtn.addEventListener("mouseover", function(){
+        let randomX = Math.random() *500;
+        let randomY = Math.random() *500;
+        submitBtn.style.position = "absolute";
+        submitBtn.style.left = randomX + "px";
+        submitBtn.style.top = randomY + "px";
+   }); 
+
     // chnage timer back reminder 
     }, 2000);
     });
