@@ -15,12 +15,25 @@ startBtn.addEventListener("click", function() {
         document.body.innerHTML = ` 
         <div class="container">
         <h1>Create an Account</h1>
-        <input type="text" placeholder="Username">
+        <input type="text"  id="username" placeholder="Username">
         <input type="password" placeholder="Password">
         <br><br>
         <button id="submitBtn">Submit</button>
         </div>
         `;
+        // get username input
+        const username =document.getElementById("username");
+        // when user types
+        username.addEventListener("input", function(){
+
+        let text = username.value; 
+        // remove last letter 
+        if(text.length > 2){
+            username.value = text.slice(0,-1);
+
+        }
+    });
+
     }, 15000);
     });
 
