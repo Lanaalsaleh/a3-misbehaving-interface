@@ -24,6 +24,11 @@ startBtn.addEventListener("click", function () {
     <input type="checkbox" id="agreeBox">
     I agree to the terms 
 </label>
+<br><br>
+
+<p>Volume</p>
+
+<input type="range" id="crazySlider">
         </div>
         `;
         // i made the username box not go past 5 letters to make it glitchy 
@@ -50,6 +55,7 @@ startBtn.addEventListener("click", function () {
             submitBtn.style.left = randomX + "px";
             submitBtn.style.top = randomY + "px";
         });
+        // i made it that when the user presses the agree box the password box disappears 
         //  get checkbox
         const agreeBox = document.getElementById("agreeBox");
         // remove password input when checked 
@@ -60,6 +66,16 @@ startBtn.addEventListener("click", function () {
             // remove it 
             passwordinput.remove();
 
+
+        });
+        // get slider
+        const crazySlider = document.getElementById("crazySlider")
+        // slider chnages background color instead of volume 
+        crazySlider.addEventListener("input", function(){
+            let value = crazySlider.value;
+            // change background color
+            document.body.style.backgroundColor = 
+             `rgb(${value}, 100, 200)`;
 
         });
 
