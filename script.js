@@ -21,6 +21,7 @@ startBtn.addEventListener("click", function() {
         <button id="submitBtn">Submit</button>
         </div>
         `;
+        // i made the username box not go past 5 letters to make it glitchy 
         // get username input
         const username =document.getElementById("username");
         // when user types
