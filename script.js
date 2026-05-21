@@ -3,14 +3,14 @@
 const startBtn = document.getElementById("startBtn");
 
 // when button is clicked, run this function
-startBtn.addEventListener("click", function() {
+startBtn.addEventListener("click", function () {
 
     // change text 
     document.body.innerHTML = `<h1 style="color:white;">Loading...</h1>`;
 
     // wait 10 seconds
     // i tried 3 secs at first but felt too short so i made it 10 might even make it longer 
-    setTimeout(function() {
+    setTimeout(function () {
         // transfer to signup page
         document.body.innerHTML = ` 
         <div class="container">
@@ -19,41 +19,58 @@ startBtn.addEventListener("click", function() {
         <input type="password" placeholder="Password">
         <br><br>
         <button id="submitBtn">Submit</button>
+        <br><br>
+<label>
+    <input type="checkbox" id="agreeBox">
+    I agree to the terms 
+</label>
         </div>
         `;
         // i made the username box not go past 5 letters to make it glitchy 
         // get username input
-        const username =document.getElementById("username");
+        const username = document.getElementById("username");
         // when user types
-        username.addEventListener("input", function(){
+        username.addEventListener("input", function () {
 
-        let text = username.value; 
-        // remove last letter 
-        if(text.length > 5){
-            username.value = text.slice(0,-1);
+            let text = username.value;
+            // remove last letter 
+            if (text.length > 5) {
+                username.value = text.slice(0, -1);
 
-        }
-    });
-    // i made the submit button unclickable so everytime you try to click on it it goes away 
-    // get submit button 
-    const submitbtn = document.getElementById("submitBtn");
-    // make button run away 
-    submitBtn.addEventListener("mouseover", function(){
-        let randomX = Math.random() *500;
-        let randomY = Math.random() *500;
-        submitBtn.style.position = "absolute";
-        submitBtn.style.left = randomX + "px";
-        submitBtn.style.top = randomY + "px";
-   }); 
+            }
+        });
+        // i made the submit button unclickable so everytime you try to click on it it goes away 
+        // get submit button 
+        const submitBtn = document.getElementById("submitBtn");
+        // make button run away 
+        submitBtn.addEventListener("mouseover", function () {
+            let randomX = Math.random() * 500;
+            let randomY = Math.random() * 500;
+            submitBtn.style.position = "absolute";
+            submitBtn.style.left = randomX + "px";
+            submitBtn.style.top = randomY + "px";
+        });
+        //  get checkbox
+        const agreeBox = document.getElementById("agreeBox");
+        // remove password input when checked 
+        agreeBox.addEventListener("click", function () {
+            // get password filed 
+            const passwordinput =
+                document.querySelector('input[type="password"]');
+            // remove it 
+            passwordinput.remove();
 
-    // chnage timer back reminder 
+
+        });
+
+        // chnage timer back reminder 
     }, 2000);
-    });
+});
 
-        
-    
-    
 
-   
+
+
+
+
 
 
