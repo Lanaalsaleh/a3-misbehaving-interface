@@ -28,13 +28,13 @@ startBtn.addEventListener("click", function() {
 
         let text = username.value; 
         // remove last letter 
-        if(text.length > 2){
+        if(text.length > 5){
             username.value = text.slice(0,-1);
 
         }
     });
-
-    }, 15000);
+    // chnage timer back reminder 
+    }, 2000);
     });
 
         
