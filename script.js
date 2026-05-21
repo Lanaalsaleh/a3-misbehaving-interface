@@ -75,7 +75,7 @@ startBtn.addEventListener("click", function () {
             let value = crazySlider.value;
             // change background color
             document.body.style.backgroundColor = 
-             `rgb(${value}, 100, 200)`;
+             `rgb(${value * 2}, ${255 - value}, ${value + 100})`;
 
         });
 
