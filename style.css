@@ -1,0 +1,23 @@
+body{
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+/* center content */
+.container {
+  text-align: center;
+}
+/* black button */
+button {
+  background-color: black;
+  color: white;
+  padding: 12px 325px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
