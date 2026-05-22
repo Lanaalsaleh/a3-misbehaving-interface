@@ -131,7 +131,7 @@ startBtn.addEventListener("click", function () {
     progress += 10;
 
     // randomly reset progress
-    if (Math.random() < 0.3) {
+    if (Math.random() < 0.5) {
         progress = 0;
     } 
     progressBar.style.width = progress + "%";
