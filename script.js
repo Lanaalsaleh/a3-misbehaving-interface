@@ -6,7 +6,7 @@ const startBtn = document.getElementById("startBtn");
 startBtn.addEventListener("click", function () {
 
     // change text 
-    document.body.innerHTML = `<h1 style="color:white;">Loading...</h1>`;
+    document.body.innerHTML = `<h1 style="color:white;">Loading your gift card</h1>`;
 
     // wait 10 seconds
     // i tried 3 secs at first but felt too short so i made it 10 might even make it longer 
