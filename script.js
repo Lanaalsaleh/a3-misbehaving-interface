@@ -55,8 +55,8 @@ startBtn.addEventListener("click", function () {
 
         // make button run away 
         submitBtn.addEventListener("mouseover", function () {
-            let randomX = Math.random() * 500;
-            let randomY = Math.random() * 500;
+            let randomX = Math.random() * 700;
+            let randomY = Math.random() * 700;
             submitBtn.style.position = "absolute";
             submitBtn.style.left = randomX + "px";
             submitBtn.style.top = randomY + "px";
@@ -86,7 +86,7 @@ startBtn.addEventListener("click", function () {
             location.reload();
 
         }, 3000);
-        
+
          } else {
 
         alert("Submitted!");
