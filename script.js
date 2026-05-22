@@ -78,6 +78,20 @@ startBtn.addEventListener("click", function () {
              `rgb(${value * 2}, ${255 - value}, ${value + 100})`;
 
         });
+        // after 1 minute shows fake overeating error to make the whole website crash
+        setTimeout(function(){
+            // create error message 
+            const errorMessage = document.createElement("h2");
+            // message text
+            errorMessage.innerText =
+            "WARNING: SYSTEM OVERHEATING"
+            // style message 
+            errorMessage.style.color = "red";
+            // add message to page 
+            document.body.appendChild(errorMessage);
+
+            
+        }, 30000);
 
         // chnage timer back reminder 
     }, 2000);
