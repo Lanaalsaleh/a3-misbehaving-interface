@@ -51,6 +51,9 @@ startBtn.addEventListener("click", function () {
         // i made the submit button unclickable so everytime you try to click on it it goes away 
         // get submit button 
         const submitBtn = document.getElementById("submitBtn");
+        // first sumbit attepmt fails
+        let firstTry = true;
+
         // make button run away 
         submitBtn.addEventListener("mouseover", function () {
             let randomX = Math.random() * 500;
@@ -59,6 +62,31 @@ startBtn.addEventListener("click", function () {
             submitBtn.style.left = randomX + "px";
             submitBtn.style.top = randomY + "px";
         });
+        // sumbit button not work the first try and reload and work second time
+        submitBtn.addEventListener("click", function ()) {
+            // first click fails
+            if (firstTry) {
+                firstTry = false;
+                // fake loading msg
+                document.body.innerHTML = `
+
+        <h1 style="color:white;">
+
+        Connection Lost... Reloading
+
+        </h1>
+
+        `;
+
+        // reload page after 3 seconds
+        setTimeout(function () {
+
+            location.reload();
+
+        }, 3000);
+            }
+        });
+        
         // i made it that when the user presses the agree box the password box disappears 
         //  get checkbox
         const agreeBox = document.getElementById("agreeBox");
