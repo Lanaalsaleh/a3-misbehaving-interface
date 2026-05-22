@@ -63,10 +63,8 @@ startBtn.addEventListener("click", function () {
             submitBtn.style.top = randomY + "px";
         });
         // sumbit button not work the first try and reload and work second time
-        submitBtn.addEventListener("click", function ()) {
+        submitBtn.addEventListener("click", function () {
             // first click fails
-            if (firstTry) {
-                firstTry = false;
                 // fake loading msg
                 document.body.innerHTML = `
 
@@ -84,9 +82,9 @@ startBtn.addEventListener("click", function () {
             location.reload();
 
         }, 3000);
-            }
+            
         });
-        
+
         // i made it that when the user presses the agree box the password box disappears 
         //  get checkbox
         const agreeBox = document.getElementById("agreeBox");
