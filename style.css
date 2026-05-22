@@ -37,3 +37,10 @@ button {
 .gift-box p {
     color: #333;
 }
+.fake-card {
+    width: 220px;
+    height: 120px;
+    background: linear-gradient(to right, hotpink, purple);
+    border-radius: 15px;
+    margin: 0 auto 20px auto;
+}
