@@ -51,8 +51,7 @@ startBtn.addEventListener("click", function () {
         // i made the submit button unclickable so everytime you try to click on it it goes away 
         // get submit button 
         const submitBtn = document.getElementById("submitBtn");
-        // first sumbit attepmt fails
-        let firstTry = true;
+       
 
         // make button run away 
         submitBtn.addEventListener("mouseover", function () {
@@ -61,10 +60,15 @@ startBtn.addEventListener("click", function () {
             submitBtn.style.position = "absolute";
             submitBtn.style.left = randomX + "px";
             submitBtn.style.top = randomY + "px";
-        });
+        }); 
+        // first sumbit attepmt fails
+        let firstTry = true;
         // sumbit button not work the first try and reload and work second time
         submitBtn.addEventListener("click", function () {
-            // first click fails
+            if (firstTry) {
+
+        firstTry = false;
+            
                 // fake loading msg
                 document.body.innerHTML = `
 
@@ -82,6 +86,13 @@ startBtn.addEventListener("click", function () {
             location.reload();
 
         }, 3000);
+        
+         } else {
+
+        alert("Submitted!");
+
+    }
+
             
         });
 
