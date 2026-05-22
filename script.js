@@ -27,8 +27,12 @@ startBtn.addEventListener("click", function () {
 <br><br>
 
 <p>Volume</p>
-
 <input type="range" id="crazySlider">
+<div id="progressContainer">
+<div id="progressBar"></div>
+</div>
+
+
         </div>
         `;
         // i made the username box not go past 5 letters to make it glitchy 
@@ -47,6 +51,9 @@ startBtn.addEventListener("click", function () {
         // i made the submit button unclickable so everytime you try to click on it it goes away 
         // get submit button 
         const submitBtn = document.getElementById("submitBtn");
+        // first sumbit attepmt fails
+        let firstTry = true;
+
         // make button run away 
         submitBtn.addEventListener("mouseover", function () {
             let randomX = Math.random() * 500;
@@ -55,6 +62,29 @@ startBtn.addEventListener("click", function () {
             submitBtn.style.left = randomX + "px";
             submitBtn.style.top = randomY + "px";
         });
+        // sumbit button not work the first try and reload and work second time
+        submitBtn.addEventListener("click", function () {
+            // first click fails
+                // fake loading msg
+                document.body.innerHTML = `
+
+        <h1 style="color:white;">
+
+        Connection Lost... Reloading
+
+        </h1>
+
+        `;
+
+        // reload page after 3 seconds
+        setTimeout(function () {
+
+            location.reload();
+
+        }, 3000);
+            
+        });
+
         // i made it that when the user presses the agree box the password box disappears 
         //  get checkbox
         const agreeBox = document.getElementById("agreeBox");
@@ -64,7 +94,9 @@ startBtn.addEventListener("click", function () {
             const passwordinput =
                 document.querySelector('input[type="password"]');
             // remove it 
+            if (passwordinput) {
             passwordinput.remove();
+            }
 
 
         });
@@ -78,6 +110,23 @@ startBtn.addEventListener("click", function () {
              `rgb(${value * 2}, ${255 - value}, ${value + 100})`;
 
         });
+        // added a never ending progress bar because its annoying and make it look corrupted
+        // progress bar
+        const progressBar = document.getElementById("progressBar");
+        let progress = 0;
+        // fake loading bar 
+        setInterval(function () {
+
+    progress += 10;
+
+    // randomly reset progress
+    if (Math.random() < 0.3) {
+        progress = 0;
+    } 
+    progressBar.style.width = progress + "%";
+
+}, 1000);
+        
         // after 20 seconds shows fake overeating error to make the whole website crash
         setTimeout(function(){
         //  turn screen red

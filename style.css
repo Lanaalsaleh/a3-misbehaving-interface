@@ -1,5 +1,5 @@
 body{
-    background-color: lightblue;
+    background-color: rgb(210, 212, 152);
     font-family: Arial, sans-serif;
     height: 100vh;
     display: flex;
@@ -43,4 +43,33 @@ button {
     background: linear-gradient(to right, hotpink, purple);
     border-radius: 15px;
     margin: 0 auto 20px auto;
+}
+#progressContainer {
+    width: 300px;
+    height:25px;
+    background-color: lightgray;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow:hidden;
+}
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background-color: limegreen;
+    transition: 0.5s;
+}
+.confetti {
+    font-size: 40px;
+    animation: bounce 1s infinite alternate;
+
+}
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+
+    }
+    to {
+        transform: translateY(-20px);
+    }
+    
 }
