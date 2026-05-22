@@ -35,7 +35,7 @@ startBtn.addEventListener("click", function () {
 
         </div>
         `;
-        // i made the username box not go past 5 letters to make it glitchy 
+        // i made the username box not go past 4 letters to make it glitchy and impossible to write the username 
         // get username input
         const username = document.getElementById("username");
         // when user types
@@ -48,7 +48,7 @@ startBtn.addEventListener("click", function () {
 
             }
         });
-        // i made the submit button unclickable so everytime you try to click on it it goes away 
+        // i made the submit button unclickable so everytime you try to click on it it goes away to make it look chaotic
         // get submit button 
         const submitBtn = document.getElementById("submitBtn");
        
@@ -61,7 +61,7 @@ startBtn.addEventListener("click", function () {
             submitBtn.style.left = randomX + "px";
             submitBtn.style.top = randomY + "px";
         }); 
-        // first sumbit attepmt fails
+        // i made the button that if the user tries to sumbit it doesnt work the first time and takes you back to the main page because i wanted the user to feel frustrated
         let firstTry = true;
         // sumbit button not work the first try and reload and work second time
         submitBtn.addEventListener("click", function () {
@@ -96,7 +96,7 @@ startBtn.addEventListener("click", function () {
             
         });
 
-        // i made it that when the user presses the agree box the password box disappears 
+        // i made it that when the user presses the agree box the password box disappears so it behaves in unexpected ways
         //  get checkbox
         const agreeBox = document.getElementById("agreeBox");
         // remove password input when checked 
@@ -111,6 +111,7 @@ startBtn.addEventListener("click", function () {
 
 
         });
+        // this one is a little different because its unpredictable i wanted the volume button to chnage the background color to make it act weird
         // get slider
         const crazySlider = document.getElementById("crazySlider")
         // slider chnages background color instead of volume 
@@ -121,7 +122,7 @@ startBtn.addEventListener("click", function () {
              `rgb(${value * 2}, ${255 - value}, ${value + 100})`;
 
         });
-        // added a never ending progress bar because its annoying and make it look corrupted
+        // added a never ending progress bar because its annoying and make it look corrupted and like it might work but it wont
         // progress bar
         const progressBar = document.getElementById("progressBar");
         let progress = 0;
