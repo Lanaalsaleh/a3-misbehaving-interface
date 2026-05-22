@@ -32,7 +32,7 @@ startBtn.addEventListener("click", function () {
 <div id="progressBar"></div>
 </div>
 
-<input type="range" id="crazySlider">
+
         </div>
         `;
         // i made the username box not go past 5 letters to make it glitchy 
@@ -68,7 +68,9 @@ startBtn.addEventListener("click", function () {
             const passwordinput =
                 document.querySelector('input[type="password"]');
             // remove it 
+            if (passwordinput) {
             passwordinput.remove();
+            }
 
 
         });
@@ -82,8 +84,9 @@ startBtn.addEventListener("click", function () {
              `rgb(${value * 2}, ${255 - value}, ${value + 100})`;
 
         });
+        // added a never ending progress bar because its annoying and make it look corrupted
         // progress bar
-        const progressBar = documnet.getElementById("progressBar");
+        const progressBar = document.getElementById("progressBar");
         let progress = 0;
         // fake loading bar 
         setInterval(function () {
