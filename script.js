@@ -35,6 +35,7 @@ startBtn.addEventListener("click", function () {
 
         </div>
         `;
+        // made the username box not go past 3 letters then changed it to 5 then 4 i was just trying and 4 seemed perfect 
         // i made the username box not go past 4 letters to make it glitchy and impossible to write the username 
         // get username input
         const username = document.getElementById("username");
@@ -54,6 +55,7 @@ startBtn.addEventListener("click", function () {
        
 
         // make button run away 
+        // the speed was 500 but then i changed it to 700 just becuase i wanted to feel more broken
         submitBtn.addEventListener("mouseover", function () {
             let randomX = Math.random() * 700;
             let randomY = Math.random() * 700;
@@ -138,7 +140,7 @@ startBtn.addEventListener("click", function () {
     progressBar.style.width = progress + "%";
 
 }, 1000);
-        
+        // at first i just made it that a text over the sign up page would appear but i felt that if the whole page chnaged it would look more like a real crash 
         // after 15 seconds shows fake overeating error to make the whole website crash
         setTimeout(function(){
         //  turn screen red
