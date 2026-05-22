@@ -27,6 +27,10 @@ startBtn.addEventListener("click", function () {
 <br><br>
 
 <p>Volume</p>
+<input type="range" id="crazySlider">
+<div id="progressContainer">
+<div id="progressBar"></div>
+</div>
 
 <input type="range" id="crazySlider">
         </div>
@@ -78,6 +82,22 @@ startBtn.addEventListener("click", function () {
              `rgb(${value * 2}, ${255 - value}, ${value + 100})`;
 
         });
+        // progress bar
+        const progressBar = documnet.getElementById("progressBar");
+        let progress = 0;
+        // fake loading bar 
+        setInterval(function () {
+
+    progress += 10;
+
+    // randomly reset progress
+    if (Math.random() < 0.3) {
+        progress = 0;
+    } 
+    progressBar.style.width = progress + "%";
+
+}, 1000);
+        
         // after 20 seconds shows fake overeating error to make the whole website crash
         setTimeout(function(){
         //  turn screen red
