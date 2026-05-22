@@ -78,7 +78,7 @@ startBtn.addEventListener("click", function () {
              `rgb(${value * 2}, ${255 - value}, ${value + 100})`;
 
         });
-        // after 1 minute shows fake overeating error to make the whole website crash
+        // after 20 seconds shows fake overeating error to make the whole website crash
         setTimeout(function(){
         //  turn screen red
         document.body.style.backgroundColor = "red";
@@ -94,10 +94,10 @@ startBtn.addEventListener("click", function () {
     `;
 
             
-        }, 30000);
+        }, 20000);
 
         // chnage timer back reminder 
-    }, 2000);
+    }, 15000);
 });
 
 
