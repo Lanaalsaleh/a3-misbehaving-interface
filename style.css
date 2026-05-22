@@ -58,3 +58,18 @@ button {
     background-color: limegreen;
     transition: 0.5s;
 }
+.confetti {
+    font-size: 40px;
+    animation: bounce 1s infinite alternate;
+
+}
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+
+    }
+    to {
+        transform: translateY(-20px);
+    }
+    
+}
