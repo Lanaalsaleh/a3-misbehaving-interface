@@ -43,7 +43,7 @@ startBtn.addEventListener("click", function () {
 
             let text = username.value;
             // remove last letter 
-            if (text.length > 5) {
+            if (text.length > 4) {
                 username.value = text.slice(0, -1);
 
             }
